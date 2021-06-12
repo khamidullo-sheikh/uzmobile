@@ -44,7 +44,8 @@ h3 {
 h4 {
   font-weight: 600;
   font-size: 24px;
-  line-height: 29px; }
+  line-height: 29px;
+  margin-bottom: 25px; }
 
 ul {
   list-style: none; }
@@ -60,17 +61,23 @@ body header .navbar-top .nav-top .link-right, body section .content-services .bo
   line-height: 150%;
   color: #000000; }
 
-body header section .text-section a, body section .content-services .body .payment-section form input, body section .content-services .body .payment-section form label {
+body section .content-tarrif .tarrifs .tarrif .middle .list, body section .news .body-content p {
+  font-size: 112.5%;
+  font-weight: 500;
+  line-height: 150%;
+  font-style: normal; }
+
+body header section .text-section a, body section .content-services .body .payment-section form input, body section .content-services .body .payment-section form label, body section .content-tarrif .tarrifs .tarrif .bottom span, body #map .select {
   font-size: 150%;
   font-weight: 500;
   line-height: 150%;
   font-style: normal; }
 
-body header .navbar-top .activeLeft, body header .navbar-top .activeRight, body header .navbar-bottom .active, body section .active {
+body header .navbar-top .activeLeft, body header .navbar-top .activeRight, body header .navbar-bottom .active, body section .active, body section .news .column:nth-child(2) h4 {
   color: #00D74A !important;
   font-weight: bold !important; }
 
-body header section .image-section::before, body section .content-services .body .payment-section .payment-type::before {
+body header section .image-section::before, body section .content-services .body .payment-section .payment-type::before, body section .content-tarrif .tarrifs .tarrif:first-child::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -231,140 +238,288 @@ body {
       body header section .image-section img {
         width: 105%;
         height: 100%; }
-  body section {
-    background-color: #e5e5e5; }
-    body section .active {
-      border-bottom-color: #00D74A !important; }
-      body section .active::before {
-        color: #00D74A !important; }
-    body section .content-services {
-      padding-top: 150px; }
-      body section .content-services .body {
-        display: flex; }
-        body section .content-services .body .payment-section {
-          flex-shrink: 0;
-          width: 390px;
-          padding: 32px;
-          background-color: #fff; }
-          body section .content-services .body .payment-section .payment-type {
-            display: flex;
-            margin-top: 20px;
-            margin-bottom: 60px;
-            position: relative;
-            z-index: 0; }
-            body section .content-services .body .payment-section .payment-type li:last-child a {
-              margin-right: 0; }
-            body section .content-services .body .payment-section .payment-type::before {
-              height: 3px;
-              background-color: #B3B3B3;
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              z-index: -1; }
-            body section .content-services .body .payment-section .payment-type .payment-link {
-              display: flex;
-              align-items: center;
-              padding: 16px 4px;
-              border-bottom: 3px solid transparent;
-              margin-right: 30px;
-              word-spacing: -3px;
-              transition: color .3s ease, border-bottom-color .3s ease; }
-              body section .content-services .body .payment-section .payment-type .payment-link::before {
-                font-size: 20px;
-                margin-right: 10px;
-                color: #000;
-                transition: color .3s ease; }
-              body section .content-services .body .payment-section .payment-type .payment-link:hover, body section .content-services .body .payment-section .payment-type .payment-link:hover::before {
-                color: #00D74A;
-                border-bottom-color: #00D74A; }
-          body section .content-services .body .payment-section form {
-            position: relative; }
-            body section .content-services .body .payment-section form input {
-              width: 100%;
-              padding: 10px 0;
-              border: none;
-              border-bottom: 3px solid #000; }
-            body section .content-services .body .payment-section form input:nth-child(2) {
-              margin-bottom: 32px;
-              padding-left: 60px; }
-            body section .content-services .body .payment-section form input:nth-child(4) {
-              padding-right: 50px; }
-            body section .content-services .body .payment-section form label {
-              font-weight: bold;
-              position: absolute; }
-            body section .content-services .body .payment-section form label:nth-child(1) {
-              top: 10px;
-              left: 0; }
-            body section .content-services .body .payment-section form label:nth-child(3) {
-              bottom: 109px;
-              right: 0; }
-            body section .content-services .body .payment-section form .btn-full {
-              display: inline-block;
-              border: none;
-              padding: 14px 52px;
-              background-color: #00D74A;
-              color: #fff;
-              text-align: center;
-              border-radius: 10px;
-              transition: all .3s linear;
-              margin-top: 50px; }
-              body section .content-services .body .payment-section form .btn-full:hover {
-                background-color: #00A138; }
-            body section .content-services .body .payment-section form p {
-              display: inline-block;
-              position: relative;
-              top: 10px;
-              left: 25px; }
-        body section .content-services .body .tarrif-section {
+  body section .active {
+    border-bottom-color: #00D74A !important; }
+    body section .active::before {
+      color: #00D74A !important; }
+  body section .content-services {
+    padding: 150px 0; }
+    body section .content-services .body {
+      display: flex; }
+      body section .content-services .body .payment-section {
+        flex-shrink: 0;
+        width: 390px;
+        padding: 32px;
+        background-color: #fff; }
+        body section .content-services .body .payment-section .payment-type {
           display: flex;
-          flex-wrap: wrap; }
-          body section .content-services .body .tarrif-section .block {
-            display: block;
-            flex-shrink: 0;
-            width: 188px;
-            background-color: #fff;
-            margin-left: 14px;
-            margin-bottom: 14px;
+          margin-top: 20px;
+          margin-bottom: 60px;
+          position: relative;
+          z-index: 0; }
+          body section .content-services .body .payment-section .payment-type li:last-child a {
+            margin-right: 0; }
+          body section .content-services .body .payment-section .payment-type::before {
+            height: 3px;
+            background-color: #B3B3B3;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1; }
+          body section .content-services .body .payment-section .payment-type .payment-link {
+            display: flex;
+            align-items: center;
+            padding: 16px 4px;
+            border-bottom: 3px solid transparent;
+            margin-right: 30px;
+            word-spacing: -3px;
+            transition: color .3s ease, border-bottom-color .3s ease; }
+            body section .content-services .body .payment-section .payment-type .payment-link::before {
+              font-size: 20px;
+              margin-right: 10px;
+              color: #000;
+              transition: color .3s ease; }
+            body section .content-services .body .payment-section .payment-type .payment-link:hover, body section .content-services .body .payment-section .payment-type .payment-link:hover::before {
+              color: #00D74A;
+              border-bottom-color: #00D74A; }
+        body section .content-services .body .payment-section form {
+          position: relative; }
+          body section .content-services .body .payment-section form input {
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-bottom: 3px solid #000; }
+          body section .content-services .body .payment-section form input:nth-child(2) {
+            margin-bottom: 32px;
+            padding-left: 60px; }
+          body section .content-services .body .payment-section form input:nth-child(4) {
+            padding-right: 50px; }
+          body section .content-services .body .payment-section form label {
+            font-weight: bold;
+            position: absolute; }
+          body section .content-services .body .payment-section form label:nth-child(1) {
+            top: 10px;
+            left: 0; }
+          body section .content-services .body .payment-section form label:nth-child(3) {
+            bottom: 109px;
+            right: 0; }
+          body section .content-services .body .payment-section form .btn-full {
+            display: inline-block;
+            border: none;
+            padding: 14px 52px;
+            background-color: #00D74A;
+            color: #fff;
+            text-align: center;
             border-radius: 10px;
+            transition: all .3s linear;
+            margin-top: 50px; }
+            body section .content-services .body .payment-section form .btn-full:hover {
+              background-color: #00A138; }
+          body section .content-services .body .payment-section form p {
+            display: inline-block;
             position: relative;
-            transition: box-shadow .2s ease; }
-            body section .content-services .body .tarrif-section .block p {
-              text-align: center;
-              margin-top: 80%; }
-            body section .content-services .body .tarrif-section .block::before {
-              content: "";
-              width: 80px;
-              height: 80px;
-              background-color: #F2FDF6;
-              border-radius: 80px;
-              position: absolute;
-              background-position: center center;
-              background-size: 50%;
-              background-repeat: no-repeat;
-              top: 40%;
-              left: 50%;
-              transform: translate(-50%, -60%); }
-            body section .content-services .body .tarrif-section .block:nth-child(1)::before {
-              background-image: url(../img/GSM.svg); }
-            body section .content-services .body .tarrif-section .block:nth-child(2)::before {
-              background-image: url(../img/CDMA.svg); }
-            body section .content-services .body .tarrif-section .block:nth-child(3)::before {
-              background-image: url(../img/globus.svg); }
-            body section .content-services .body .tarrif-section .block:nth-child(4)::before {
-              background-image: url(../img/network.svg); }
-            body section .content-services .body .tarrif-section .block:nth-child(5)::before {
-              background-image: url(../img/site.svg); }
-            body section .content-services .body .tarrif-section .block:nth-child(6)::before {
-              background-image: url(../img/CDMA.svg); }
-            body section .content-services .body .tarrif-section .block:nth-child(7)::before {
-              background-image: url(../img/CDMA.svg); }
-            body section .content-services .body .tarrif-section .block:nth-child(8)::before {
-              background-image: url(../img/CDMA.svg); }
-            body section .content-services .body .tarrif-section .block:hover {
-              box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.1); }
-            body section .content-services .body .tarrif-section .block:active {
-              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); }
-            body section .content-services .body .tarrif-section .block:nth-child(5), body section .content-services .body .tarrif-section .block:nth-child(6), body section .content-services .body .tarrif-section .block:nth-child(7), body section .content-services .body .tarrif-section .block:nth-child(8) {
-              margin-bottom: 0; }
+            top: 10px;
+            left: 25px; }
+      body section .content-services .body .tarrif-section {
+        display: flex;
+        flex-wrap: wrap; }
+        body section .content-services .body .tarrif-section .block {
+          display: block;
+          flex-shrink: 0;
+          width: 188px;
+          background-color: #fff;
+          margin-left: 14px;
+          margin-bottom: 14px;
+          border-radius: 10px;
+          position: relative;
+          transition: box-shadow .2s ease; }
+          body section .content-services .body .tarrif-section .block p {
+            text-align: center;
+            margin-top: 80%; }
+          body section .content-services .body .tarrif-section .block::before {
+            content: "";
+            width: 80px;
+            height: 80px;
+            background-color: #F2FDF6;
+            border-radius: 80px;
+            position: absolute;
+            background-position: center center;
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -60%); }
+          body section .content-services .body .tarrif-section .block:nth-child(1)::before {
+            background-image: url(../img/GSM.svg);
+            background-size: 70%; }
+          body section .content-services .body .tarrif-section .block:nth-child(2)::before {
+            background-image: url(../img/CDMA.svg);
+            background-size: 80%; }
+          body section .content-services .body .tarrif-section .block:nth-child(3)::before {
+            background-image: url(../img/globus.svg); }
+          body section .content-services .body .tarrif-section .block:nth-child(4)::before {
+            background-image: url(../img/network.svg); }
+          body section .content-services .body .tarrif-section .block:nth-child(5)::before {
+            background-image: url(../img/site.svg); }
+          body section .content-services .body .tarrif-section .block:nth-child(6)::before {
+            background-image: url(../img/wifi.svg); }
+          body section .content-services .body .tarrif-section .block:nth-child(7)::before {
+            background-image: url(../img/loc.svg);
+            background-size: 30%; }
+          body section .content-services .body .tarrif-section .block:nth-child(8)::before {
+            background-image: url(../img/mobile.svg);
+            background-size: 30%; }
+          body section .content-services .body .tarrif-section .block:hover {
+            box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.1); }
+          body section .content-services .body .tarrif-section .block:active {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); }
+          body section .content-services .body .tarrif-section .block:nth-child(5), body section .content-services .body .tarrif-section .block:nth-child(6), body section .content-services .body .tarrif-section .block:nth-child(7), body section .content-services .body .tarrif-section .block:nth-child(8) {
+            margin-bottom: 0; }
+  body section .content-tarrif .tarrifs {
+    display: flex;
+    flex-wrap: wrap; }
+    body section .content-tarrif .tarrifs .tarrif {
+      padding: 18px 36px;
+      background-color: #fff;
+      min-width: 590px;
+      border-radius: 10px;
+      margin-right: 16px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 0; }
+      body section .content-tarrif .tarrifs .tarrif:first-child::before {
+        width: 126px;
+        height: 126px;
+        top: 20px;
+        left: 20px;
+        background-image: url(../img/Chart.svg);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1; }
+      body section .content-tarrif .tarrifs .tarrif:nth-child(2), body section .content-tarrif .tarrifs .tarrif:last-child {
+        margin-right: 0; }
+      body section .content-tarrif .tarrifs .tarrif .top {
+        padding-left: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 24px;
+        margin-bottom: 50px; }
+        body section .content-tarrif .tarrifs .tarrif .top div {
+          padding: 4px 12px;
+          background-color: #000;
+          border-radius: 10px;
+          color: #fff;
+          text-transform: uppercase; }
+      body section .content-tarrif .tarrifs .tarrif .middle {
+        padding-bottom: 35px;
+        border-bottom: 2px solid #e5e5e5; }
+        body section .content-tarrif .tarrifs .tarrif .middle .list {
+          display: flex;
+          justify-content: space-around; }
+          body section .content-tarrif .tarrifs .tarrif .middle .list .icon::before {
+            position: relative;
+            margin-right: 12px;
+            top: 2px; }
+      body section .content-tarrif .tarrifs .tarrif .bottom {
+        padding-top: 26px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        body section .content-tarrif .tarrifs .tarrif .bottom span {
+          font-weight: bold; }
+        body section .content-tarrif .tarrifs .tarrif .bottom .buttons .btn-ghost {
+          display: inline-block;
+          border: none;
+          padding: 9px 41px;
+          background-color: transparent;
+          color: #000;
+          border: 1px solid #000;
+          text-align: center;
+          border-radius: 10px;
+          transition: all .3s linear;
+          margin-right: 16px; }
+          body section .content-tarrif .tarrifs .tarrif .bottom .buttons .btn-ghost:hover {
+            background-color: #6A6A6A;
+            color: #ffffff;
+            border-color: #6A6A6A; }
+        body section .content-tarrif .tarrifs .tarrif .bottom .buttons .btn-full {
+          display: inline-block;
+          border: none;
+          padding: 10px 20px;
+          background-color: #00D74A;
+          color: #fff;
+          text-align: center;
+          border-radius: 10px;
+          transition: all .3s linear; }
+          body section .content-tarrif .tarrifs .tarrif .bottom .buttons .btn-full:hover {
+            background-color: #00A138; }
+  body section .news {
+    display: flex;
+    padding-top: 150px;
+    flex-wrap: nowrap; }
+    body section .news .column {
+      display: flex;
+      flex-direction: column;
+      margin-right: 16px;
+      min-width: 390px; }
+      body section .news .column:last-child {
+        margin-right: 0; }
+    body section .news .body-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px; }
+      body section .news .body-content p {
+        text-align: justify; }
+      body section .news .body-content .col-footer {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        padding-top: 80px; }
+        body section .news .body-content .col-footer p {
+          margin-right: auto;
+          font-weight: bold;
+          flex: 1 1 auto; }
+        body section .news .body-content .col-footer .page {
+          margin-left: 16px;
+          width: 48px;
+          height: 48px;
+          background-color: #F6F6F6;
+          border-radius: 50%; }
+          body section .news .body-content .col-footer .page a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+  body #map {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 30px; }
+    body #map h2 {
+      padding: 0; }
+    body #map label, body #map i {
+      cursor: pointer; }
+    body #map input {
+      display: none; }
+    body #map i {
+      margin-left: 10px; }
+  body .geo-position {
+    max-width: 1440px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 15px;
+    background-image: url(../img/map.svg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat; }
 
 /*# sourceMappingURL=main.css.map */
